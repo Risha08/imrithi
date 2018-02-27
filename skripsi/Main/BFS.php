@@ -302,7 +302,7 @@ echo "{";
 	while (sizeof($queue)){ //selama antrian masih ada 
 		//delete antrian paling belakang
 		$vertex = array_pop($queue); 
-		$vertex['class']->$vertex['fungsi']($awal,$kata); //mengunjungi node antrian yg paling belakang 
+		$vertex['class']->{$vertex['fungsi']}($awal,$kata); //mengunjungi node antrian yg paling belakang 
 		foreach ($vertex['neighbours'] as $neighbour) { 
 			//mengunjungi mana yang belum dikunjungi
 			if(!$incidenceList[$neighbour]['visited']){ 
