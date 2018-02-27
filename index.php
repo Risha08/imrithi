@@ -212,7 +212,7 @@ $createNew = array();
 
 $kas = implode($createNew,JSON_UNESCAPED_UNICODE);
 
-$jsonUrl = file_get_contents('http://localhost/imrithi/skripsi/Main/BFS.php?kata='.urlencode($kata));
+$jsonUrl = file_get_contents('http://172.16.0.55:8000/Main/BFS.php?kata='.urlencode($kata));
 $json_idr = json_decode($jsonUrl, true); //array
 
  ?>
